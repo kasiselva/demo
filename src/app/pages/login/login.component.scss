@@ -1,0 +1,31 @@
+.logincontainer
+{
+    padding-top: 15% !important;
+}
+.is-invalid{
+    border-color: red !important;
+}
+.invalid-feedback{
+    color: red !important;
+}
+.bgimg { 
+    /* The image used */
+    background-image: url('../../../assets/images/loginbg.jpg');
+
+    /* Full height */
+    height: 100% !important; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}

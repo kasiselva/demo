@@ -1,0 +1,7 @@
+[{ "name":"Selva Kumar", "username":"selva", "email":"kasiselvakumar@gmail.com","password":"selva" , "petname":"chella","image":"assets/images/selvaimg.jpg"},
+{ "name":"Santhosh Kumar", "username":"santhosh", "email":"santhosh@gmail.com","password":"santhosh" , "petname":"sandy","image":"assets/images/sandyimg.jpg"},
+{ "name":"Suresh Kumar", "username":"suresh", "email":"suresh@gmail.com","password":"suresh" , "petname":"SK","image":"assets/images/sureshimg.jpg"},
+{ "name":"Deepak E", "username":"deepak", "email":"deepak@gmail.com","password":"deepak" , "petname":"DK","image":"assets/images/deepakimg.jpg"},
+{ "name":"Pravin Kumar", "username":"pravin", "email":"pravin@gmail.com","password":"pravin" , "petname":"pravin","image":"assets/images/selvaimg.jpg"},
+{ "name":"Amal Dass", "username":"amal", "email":"amal@gmail.com","password":"amal" , "petname":"amal","image":"assets/images/selvaimg.jpg"},
+{ "name":"Admin", "username":"admin", "email":"admin@gmail.com","password":"admin" , "petname":"selva","image":"assets/images/selvaimg.jpg"}]
