@@ -58,6 +58,7 @@ export class LoginComponent {
          let usermodel: UserModel = { Name: validres.name,Username :validres.email, Email: validres.username,
           PetName : validres.petname,LoginDate : new Date(),Image : validres.image };
          localStorage.setItem("_userModel",JSON.stringify(usermodel))
+         localStorage.setItem("_islogin",JSON.stringify("true"))
           this.router.navigate(["dashboard"]);
         }
         else {

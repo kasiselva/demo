@@ -16,6 +16,8 @@ import { routing } from './pages.routing';
 /* service */
 import { LoginService } from '../shared/services/login.service';
 
+import { AuthGuard } from '../shared/guards/auth.guard';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -26,7 +28,7 @@ import { LoginService } from '../shared/services/login.service';
     routing
   ],
   providers: [
-    LoginService
+    LoginService,AuthGuard
 ],
   declarations: [LoginComponent,PagesComponent]
 })

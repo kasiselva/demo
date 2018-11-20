@@ -16,6 +16,7 @@ export class RightConfigComponent implements OnInit {
 
   configToggle() {
     this.router.navigate(["login"]);
+    localStorage.clear();
     //this.isConfigToggle = !this.isConfigToggle;
     //this._globalService._sidebarToggleState(!this.isConfigToggle);
     //this._globalService.dataBusChanged('sidebarToggle', !this.isConfigToggle);

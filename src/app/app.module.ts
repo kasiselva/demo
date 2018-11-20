@@ -6,6 +6,7 @@ import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './shared/guards/auth.guard';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     routing
   ],
+  providers: [AuthGuard],
   declarations: [
     AppComponent,
   ],
