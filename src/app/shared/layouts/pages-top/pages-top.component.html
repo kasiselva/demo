@@ -33,5 +33,10 @@
       <span class="badge" *ngIf="tip.email"></span>
     </div>
   </div> -->
-
+  <div class="msg-entrance email">
+    <select class="form-control" name="lang" [(ngModel)]="language" (ngModelChange)="onLanguageChange($event)">
+      <option *ngFor="let val of languageList" [ngValue]="val.key">{{val.value}}</option>
+  </select>
+  </div>
+  
 </div>

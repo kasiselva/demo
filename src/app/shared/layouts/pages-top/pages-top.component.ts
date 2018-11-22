@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
 import { UserModel } from '../../models/index';
+import { TranslateService } from '@ngx-translate/core';
+import { KeyValue } from '../../models/index';
 
 @Component({
   selector: 'pages-top',
@@ -12,15 +14,32 @@ export class PagesTopComponent {
   userName: string;//= 'Folisise Chosielie';
   petName: string ; //= 'Musician, Player';
   userModel = new UserModel();
-
+public languageList = new Array<KeyValue>();
+  language = {};
   sidebarToggle: boolean = true;
   tip = { ring: true, email: true };
 
-  constructor(private _globalService: GlobalService) { 
+  constructor(private _globalService: GlobalService,public translate: TranslateService) { 
+    debugger;
     this.userModel = JSON.parse(localStorage.getItem("_userModel")); 
     this.userName = this.userModel.Name;
     this.petName = this.userModel.PetName;
     this.avatarImgSrc = this.userModel.Image;
+// translate
+    this.languageList.push({ key: 'af', value: 'Afrikaans' });
+    this.languageList.push({ key: 'en', value: 'English' });
+    this.languageList.push({ key: 'zu', value: 'Zulu' });
+   let currentlang = this.languageList.filter(i=>i.key =='en');
+   if(currentlang!=null && currentlang!= undefined && currentlang.length == 1)
+   {
+    this.language = currentlang[0].key;
+    translate.addLangs(['en', 'af','zu']);
+    translate.setDefaultLang('en');
+    
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|af|zu/) ? browserLang : 'en');
+    localStorage.setItem('langugae', 'en');
+   }
   }
 
   public _sidebarToggle() {
@@ -42,4 +61,10 @@ export class PagesTopComponent {
 
     //this._globalService._sidebarToggleState(!this.sidebarToggle);
   }
+  onLanguageChange(language) {
+    debugger;
+    this.translate.use(language);
+    localStorage.setItem('langugae', language);
+  }
+
 }

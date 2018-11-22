@@ -5,9 +5,14 @@ import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routing';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AuthGuard } from './shared/guards/auth.guard';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'src/assets/i18n/', '.json');
+}
 
 @NgModule({
   imports: [
@@ -17,7 +22,14 @@ import { AuthGuard } from './shared/guards/auth.guard';
     ReactiveFormsModule,
     PagesModule,
     HttpClientModule,
-    routing
+    routing,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: (createTranslateLoader),
+          deps: [HttpClient]
+      }
+  }),
   ],
   providers: [AuthGuard],
   declarations: [

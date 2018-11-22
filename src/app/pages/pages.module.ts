@@ -17,6 +17,7 @@ import { routing } from './pages.routing';
 import { LoginService } from '../shared/services/login.service';
 
 import { AuthGuard } from '../shared/guards/auth.guard';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { AuthGuard } from '../shared/guards/auth.guard';
     FormsModule,
     SharedModule,
     ReactiveFormsModule,
-    routing
+    routing,
+    TranslateModule.forRoot()
   ],
   providers: [
     LoginService,AuthGuard

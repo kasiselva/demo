@@ -42,16 +42,13 @@ export class LoginComponent {
     loginParam.Username = this.f.email.value;
     loginParam.Password = this.f.password.value;
     // this.loginService.login(loginParam).subscribe(result=>{
-    //   debugger;
     //   var res = result;
     // },
     // err =>{
-    //   debugger;
     //   var error = err;
     // });
     //////////////////////*********************************** */
     this.loginService.getLoginList().subscribe(userres => {
-      debugger;
       if (userres != null && userres != undefined && userres.length > 0) {
         let validres = userres.find(x => x.email === this.f.email.value && x.password === this.f.password.value)
         if (validres != null && validres != undefined) {

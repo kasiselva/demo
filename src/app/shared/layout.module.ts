@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from './shared.module';
-
+import { FormsModule } from '@angular/forms';
 // *service*
 import { GlobalService } from './services/global.service';
 
@@ -15,11 +15,14 @@ import { ContentTopComponent } from './layouts/content-top/content-top.component
 import { PagesTopComponent } from './layouts/pages-top/pages-top.component';
 import { RightConfigComponent } from './layouts/right-config/right-config.component';
 
+
+
 @NgModule({
     imports: [
         CommonModule,
         RouterModule,
-        SharedModule
+        SharedModule,
+        FormsModule
     ],
     providers: [
         GlobalService
