@@ -1,7 +1,7 @@
 export let MENU_ITEM = [
     {
         path: 'dashboard',
-        title: 'Dashboard',
+        title: 'Dashboard' ,//this.translate.instant('VALIDATION.PLEASESELECTANYONEROW'),
         icon: 'dashboard'
     },
     {

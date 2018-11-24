@@ -7,11 +7,9 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+test : string;
   constructor(public translate: TranslateService) {
-    debugger;
-    let browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|id/) ? browserLang : 'en');
+    
    }
 
   ngOnInit() {

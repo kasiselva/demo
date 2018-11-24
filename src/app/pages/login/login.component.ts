@@ -4,6 +4,7 @@ import { LoginService } from '../../shared/services/login.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {LoginParam} from '../../shared/customclass/loginparam'
 import {UserModel} from '../../shared/models/index'
+ import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ import {UserModel} from '../../shared/models/index'
 })
 export class LoginComponent {
   loginForm: FormGroup;
-  loading = false;
+  loginloading = false;
   submitted = false;
   isvalid = false;
   errormessage : string;
@@ -21,7 +22,9 @@ export class LoginComponent {
   logindata: any[];
 
   constructor(private router: Router, 
-    private loginService: LoginService, private formBuilder: FormBuilder) {
+    private loginService: LoginService, private formBuilder: FormBuilder
+    ,public translate: TranslateService
+    ) {
   }
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -37,7 +40,7 @@ export class LoginComponent {
     if (this.loginForm.invalid) {
       return;
     }
-    this.loading = true;
+    this.loginloading = true;
     let loginParam = new LoginParam();
     loginParam.Username = this.f.email.value;
     loginParam.Password = this.f.password.value;
@@ -59,14 +62,14 @@ export class LoginComponent {
           this.router.navigate(["dashboard"]);
         }
         else {
-          this.loading = false;
+          this.loginloading = false;
           this.isvalid = true;
           this.errormessage = "Invalid credentials";
           //alert("Invalid credentials");
         }
       }
       else {
-        this.loading = false;
+        this.loginloading = false;
         this.isvalid = true;
         this.errormessage = "Email or Password Wrong";
         //alert("Login data not available");

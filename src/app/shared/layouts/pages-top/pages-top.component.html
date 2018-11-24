@@ -16,12 +16,15 @@
   </div>
 
 
-  <!-- <div class="search-group">
-    <input type="text" class="search-input" placeholder="Search project · · ·">
+  <div class="search-group">
+      <select class="form-control" name="lang" [(ngModel)]="language" (ngModelChange)="onLanguageChange($event)">
+          <option *ngFor="let val of languageList" [ngValue]="val.key">{{val.value}}</option>
+      </select>
+    <!-- <input type="text" class="search-input" placeholder="Search project · · ·">
     <button class="search-btn">
       <i class="fa fa-search fa-fw"></i>
-    </button>
-  </div> -->
+    </button> -->
+  </div>
 
   <!-- <div class="msg-tips-wrap">
     <div class="msg-entrance ring">
@@ -33,10 +36,10 @@
       <span class="badge" *ngIf="tip.email"></span>
     </div>
   </div> -->
-  <div class="msg-entrance email">
+  <!-- <div class="msg-entrance email">
     <select class="form-control" name="lang" [(ngModel)]="language" (ngModelChange)="onLanguageChange($event)">
       <option *ngFor="let val of languageList" [ngValue]="val.key">{{val.value}}</option>
   </select>
-  </div>
+  </div> -->
   
 </div>

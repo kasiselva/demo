@@ -19,8 +19,10 @@ public languageList = new Array<KeyValue>();
   sidebarToggle: boolean = true;
   tip = { ring: true, email: true };
 
-  constructor(private _globalService: GlobalService,public translate: TranslateService) { 
-    debugger;
+  constructor(private _globalService: GlobalService
+    ,public translate: TranslateService
+    ) { 
+    
     this.userModel = JSON.parse(localStorage.getItem("_userModel")); 
     this.userName = this.userModel.Name;
     this.petName = this.userModel.PetName;
@@ -29,16 +31,16 @@ public languageList = new Array<KeyValue>();
     this.languageList.push({ key: 'af', value: 'Afrikaans' });
     this.languageList.push({ key: 'en', value: 'English' });
     this.languageList.push({ key: 'zu', value: 'Zulu' });
+    this.languageList.push({ key: 'ta', value: 'Tamil' });
    let currentlang = this.languageList.filter(i=>i.key =='en');
    if(currentlang!=null && currentlang!= undefined && currentlang.length == 1)
    {
     this.language = currentlang[0].key;
-    translate.addLangs(['en', 'af','zu']);
+    translate.addLangs(['en', 'af','zu','ta']);
     translate.setDefaultLang('en');
     
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|af|zu/) ? browserLang : 'en');
-    localStorage.setItem('langugae', 'en');
+    translate.use(browserLang.match(/en|af|ta|zu/) ? browserLang : 'en');
    }
   }
 
@@ -62,7 +64,6 @@ public languageList = new Array<KeyValue>();
     //this._globalService._sidebarToggleState(!this.sidebarToggle);
   }
   onLanguageChange(language) {
-    debugger;
     this.translate.use(language);
     localStorage.setItem('langugae', language);
   }

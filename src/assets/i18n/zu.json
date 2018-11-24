@@ -1,5 +1,9 @@
 {
   "DASHBOARD": {
     "FIRSTNAME": "Igama"
-  }
+  },
+  "MENU": {
+    "DASHBOARD": "Igama"
+  },
+  "HELLO": "zuuuuu"
 }

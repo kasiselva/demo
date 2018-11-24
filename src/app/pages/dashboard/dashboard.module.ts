@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { routing } from './dashboard.routing.module';
-import {TranslateModule} from '@ngx-translate/core';
+import {TranslateSharedModule} from '../../shared/module/translate.sharedmodule';
 
 @NgModule({
   imports: [
     CommonModule,
     routing,
-    TranslateModule.forRoot()
+    TranslateSharedModule
   ],
   declarations: [DashboardComponent]
 })
