@@ -9,12 +9,12 @@ import { RegisterComponent } from './register/register.component';
 /* module */
 import { LayoutModule } from '../shared/layout.module';
 import { SharedModule } from '../shared/shared.module';
-
+import { ToastrModule } from 'ngx-toastr';
 /* routing */
 import { routing } from './pages.routing';
 
 /* service */
-import { LoginService } from '../shared/services/login.service';
+import { LoginService,AlertService } from '../shared/services/index';
 
 import { AuthGuard } from '../shared/guards/auth.guard';
  import {TranslateSharedModule} from '../shared/module/translate.sharedmodule';
@@ -40,10 +40,15 @@ import { AuthGuard } from '../shared/guards/auth.guard';
       primaryColour: '#1a1aff', 
       secondaryColour: '#ffffff', 
       tertiaryColour: '#1a1aff'
-  })
+  }),
+  ToastrModule.forRoot({
+    timeOut: 5000,
+    positionClass: 'toast-top-right',
+    preventDuplicates: true,
+}),
   ],
   providers: [
-    LoginService,AuthGuard
+    LoginService,AlertService,AuthGuard
 ],
   declarations: [LoginComponent,PagesComponent, RegisterComponent]
 })

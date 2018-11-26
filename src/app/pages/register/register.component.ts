@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {AlertService} from '../../shared/services/index'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +14,9 @@ export class RegisterComponent implements OnInit {
   submitted = false;
   profilepicturetext : string;
   imageSrc: string;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, 
+    private alertService: AlertService,
+    private router: Router) { }
 
   ngOnInit() {
       this.registerForm = this.formBuilder.group({
@@ -28,12 +32,15 @@ export class RegisterComponent implements OnInit {
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
+      debugger;
       this.submitted = true;
 
       // stop here if form is invalid
       if (this.registerForm.invalid) {
           return;
       }
+        this.alertService.success("Successfully Registered");
+        this.router.navigate(["login"]);
   }
 
   onFileChanged(event) {

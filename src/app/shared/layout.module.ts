@@ -5,6 +5,7 @@ import { SharedModule } from './shared.module';
 import { FormsModule } from '@angular/forms';
 // *service*
 import { GlobalService } from './services/global.service';
+import { AlertService } from './services/index';
 
 
 import { NotificationComponent } from './components/notification/notification.component';
@@ -25,7 +26,8 @@ import { RightConfigComponent } from './layouts/right-config/right-config.compon
         FormsModule
     ],
     providers: [
-        GlobalService
+        GlobalService,
+        AlertService
     ],
     declarations: [
         MenuComponent,
