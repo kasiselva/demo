@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MasterService } from '../../shared/services/index';
 
 @Component({
   selector: 'app-master',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MasterComponent implements OnInit {
 
-  constructor() { }
+  masterList = [];
+  constructor(private masterService: MasterService) { }
 
   ngOnInit() {
+    debugger;
+    this.masterService.getMasterList().subscribe(res => {
+      if(res!=null && res!= undefined && res.length>0)
+        this.masterList = res;
+    });
   }
 
 }

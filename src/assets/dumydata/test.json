@@ -1,6 +1,19 @@
 {
-    "test":[
-        {"id":"1","name":"selva","username":"selva"},
-        {"id":"2","name":"selva","username":"selva"}
-    ]
+  "test": [
+    {
+      "name": "selva",
+      "color": "red",
+      "id": 1
+    },
+    {
+      "name": "mani",
+      "color": "black",
+      "id": 2
+    },
+    {
+      "name": "test",
+      "color": "silver",
+      "id": 4
+    }
+  ]
 }

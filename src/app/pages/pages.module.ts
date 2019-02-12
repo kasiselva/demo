@@ -14,7 +14,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { routing } from './pages.routing';
 
 /* service */
-import { LoginService,AlertService } from '../shared/services/index';
+import { LoginService,AlertService,MasterService } from '../shared/services/index';
 
 import { AuthGuard } from '../shared/guards/auth.guard';
  import {TranslateSharedModule} from '../shared/module/translate.sharedmodule';
@@ -48,7 +48,7 @@ import { AuthGuard } from '../shared/guards/auth.guard';
 }),
   ],
   providers: [
-    LoginService,AlertService,AuthGuard
+    LoginService,AlertService,AuthGuard,MasterService
 ],
   declarations: [LoginComponent,PagesComponent, RegisterComponent]
 })

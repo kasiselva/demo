@@ -1,0 +1,20 @@
+{
+    "master": [
+      {
+        "id": 1,
+        "date": "selva",
+        "name": "red",
+        "description": "selva",
+        "amount": 10.00
+        
+      },
+      {
+        "id": 1,
+        "date": "kumar",
+        "name": "kumar",
+        "description": "selva",
+        "amount": 10.00
+        
+      }
+    ]
+  }
