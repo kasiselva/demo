@@ -17,7 +17,8 @@ export const childRoutes: Routes = [
         component: PagesComponent, canActivate: [AuthGuard],
         children: [
             { path: '', redirectTo: 'login', pathMatch: 'full' },
-            { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' }
+            { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
+            { path: 'master', loadChildren: './master/master.module#MasterModule' },
         ]
     }
 ];
