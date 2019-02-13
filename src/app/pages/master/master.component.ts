@@ -13,10 +13,20 @@ export class MasterComponent implements OnInit {
 
   ngOnInit() {
     debugger;
+    this.fetchData();
+  }
+  deletemaster = function(id) {
+    if(confirm("Are you sure?")) {
+      this.masterService.deleteMaster(id).toPromise()
+      .then(() => {
+      this.fetchData();
+      })
+    }
+  }
+  fetchData = function() {
     this.masterService.getMasterList().subscribe(res => {
       if(res!=null && res!= undefined && res.length>0)
         this.masterList = res;
     });
   }
-
 }

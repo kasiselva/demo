@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 export class MasterService {
 
    constructor(private http: HttpClient) { }
-   private headers = new Headers({ 'Content-Type': 'application/json'});
+   private headers = new HttpHeaders({ 'Content-Type': 'application/json'});
 
    loginUrl = 'http://localhost:4000/master';
    
@@ -14,4 +14,11 @@ export class MasterService {
    public getMasterList(): Observable<any> {
      return this.http.get(this.loginUrl);
    }
+   public saveMaster(data) {
+    return this.http.post(this.loginUrl,data);
+  }
+  public deleteMaster(id) {
+    const url = `${"http://localhost:5555/test"}/${id}`;
+      return this.http.delete(url, {headers: this.headers})
+  }
 }
