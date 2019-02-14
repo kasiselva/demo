@@ -13,10 +13,13 @@ export class AddmasterComponent implements OnInit {
   addmasterForm: FormGroup;
   submitted = false;
   masterObj:object = {};
+  currentDate : Date;
   constructor(private formBuilder: FormBuilder,
     private alertService: AlertService,
     private masterService: MasterService,
-    private router: Router) { }
+    private router: Router) {
+      this.currentDate = new Date();
+     }
 
   ngOnInit() {
     this.addmasterForm = this.formBuilder.group({
@@ -35,6 +38,7 @@ export class AddmasterComponent implements OnInit {
     if (this.addmasterForm.invalid) {
       return;
     }
+    debugger;
     let master = new Master();
     master.date = massterdata.date;
     master.name = massterdata.name;

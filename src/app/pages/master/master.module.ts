@@ -10,6 +10,8 @@ import { AlertService,MasterService } from '../../shared/services/index';
 
 import { SharedModule } from '../../shared/shared.module';
 
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,8 @@ import { SharedModule } from '../../shared/shared.module';
     FormsModule,
     SharedModule,
     ReactiveFormsModule,
+    OwlDateTimeModule, 
+    OwlNativeDateTimeModule,
   ],
   providers: [
     AlertService,MasterService
