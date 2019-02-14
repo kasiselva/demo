@@ -32,7 +32,6 @@ export class RegisterComponent implements OnInit {
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
-      debugger;
       this.submitted = true;
 
       // stop here if form is invalid
@@ -44,7 +43,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onFileChanged(event) {
-    debugger;
     const file = event.target.files[0];
     if(file.type=="image/jpeg"|| file.type=="image/png")
     {

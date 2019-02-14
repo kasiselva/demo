@@ -12,7 +12,6 @@ export class MasterComponent implements OnInit {
   constructor(private masterService: MasterService) { }
 
   ngOnInit() {
-    debugger;
     this.fetchData();
   }
   deletemaster = function(id) {

@@ -32,13 +32,11 @@ export class AddmasterComponent implements OnInit {
   // convenience getter for easy access to form fields
   get f() { return this.addmasterForm.controls; }
   onSave(massterdata) {
-    debugger;
     this.submitted = true;
     // stop here if form is invalid
     if (this.addmasterForm.invalid) {
       return;
     }
-    debugger;
     let master = new Master();
     master.date = massterdata.date;
     master.name = massterdata.name;
