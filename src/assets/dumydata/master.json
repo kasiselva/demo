@@ -1,20 +1,32 @@
 {
-    "master": [
-      {
-        "id": 1,
-        "date": "selva",
-        "name": "red",
-        "description": "selva",
-        "amount": 10.00
-        
-      },
-      {
-        "id": 1,
-        "date": "kumar",
-        "name": "kumar",
-        "description": "selva",
-        "amount": 10.00
-        
-      }
-    ]
-  }
+  "master": [
+    {
+      "id": 1,
+      "date": "selva",
+      "name": "red",
+      "description": "selva",
+      "amount": 10
+    },
+    {
+      "id": 1,
+      "date": "kumar",
+      "name": "kumar",
+      "description": "selva",
+      "amount": 10
+    },
+    {
+      "date": "adssad",
+      "name": "selva",
+      "description": "sdsf",
+      "amount": 10,
+      "id": 2
+    },
+    {
+      "date": "sads",
+      "name": "rew",
+      "description": "wer",
+      "amount": 123,
+      "id": 3
+    }
+  ]
+}

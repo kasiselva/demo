@@ -5,13 +5,23 @@ import { routing } from './master.routing';
 import {TranslateSharedModule} from '../../shared/module/translate.sharedmodule';
 import { EditmasterComponent } from '../editmaster/editmaster.component';
 import { AddmasterComponent } from '../addmaster/addmaster.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { AlertService,MasterService } from '../../shared/services/index';
+
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     routing,
-    TranslateSharedModule
+    TranslateSharedModule,
+    FormsModule,
+    SharedModule,
+    ReactiveFormsModule,
   ],
+  providers: [
+    AlertService,MasterService
+],
   declarations: [MasterComponent,EditmasterComponent,AddmasterComponent]
 })
 export class MasterModule { }

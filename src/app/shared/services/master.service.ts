@@ -18,7 +18,8 @@ export class MasterService {
     return this.http.post(this.loginUrl,data);
   }
   public deleteMaster(id) {
-    const url = `${"http://localhost:5555/test"}/${id}`;
+    debugger;
+    const url = `${"http://localhost:4000/master"}/${id}`;
       return this.http.delete(url, {headers: this.headers})
   }
 }
