@@ -1,7 +1,7 @@
 <p>
   master works!
 </p>
-<a routerLink = '/pages/master-edit'> + Add Master</a>
+<a routerLink = '/pages/master/addmaster'> + Add Master</a>
 <table class="table table-bordered table-striped table-actions">
   <thead>
     <tr>
@@ -31,7 +31,7 @@
       <td>{{item.name}}</td>
       <td>{{item.description}}</td>
       <td>{{item.amount}}</td>
-    <td [routerLink] = "['/pages/master-edit', item.id]"><a>UPDATE</a></td>
+    <td [routerLink] = "['/pages/master/editmaster', item.id]"><a>UPDATE</a></td>
     <td (click) = "deletemaster(item.id)"><a>DELETE</a></td>
     </tr>
     <tr *ngIf="!masterList">
@@ -39,3 +39,4 @@
     </tr>
   </tbody>
 </table>
+

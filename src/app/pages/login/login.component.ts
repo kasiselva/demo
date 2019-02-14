@@ -59,7 +59,7 @@ export class LoginComponent {
           PetName : validres.petname,LoginDate : new Date(),Image : validres.image };
          localStorage.setItem("_userModel",JSON.stringify(usermodel))
          localStorage.setItem("_islogin",JSON.stringify("true"))
-          this.router.navigate(["dashboard"]);
+          this.router.navigate(["pages/dashboard"]);
         }
         else {
           this.loginloading = false;

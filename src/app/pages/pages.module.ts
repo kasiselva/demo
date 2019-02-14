@@ -20,6 +20,9 @@ import { AuthGuard } from '../shared/guards/auth.guard';
  import {TranslateSharedModule} from '../shared/module/translate.sharedmodule';
 
  import { NgxLoadingModule,ngxLoadingAnimationTypes  } from 'ngx-loading';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
+
 
 
 
@@ -50,6 +53,6 @@ import { AuthGuard } from '../shared/guards/auth.guard';
   providers: [
     LoginService,AlertService,AuthGuard,MasterService
 ],
-  declarations: [LoginComponent,PagesComponent, RegisterComponent]
+  declarations: [LoginComponent,PagesComponent, RegisterComponent, PagenotfoundComponent]
 })
 export class PagesModule { }

@@ -6,10 +6,10 @@ const appRoutes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
-  {
-    path: '**',
-    redirectTo: 'pages/dashboard'
-  }
+    // {
+    //   path: '**',
+    //   redirectTo: 'pages/dashboard'
+    // }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
