@@ -17,6 +17,10 @@ export class MasterService {
    public saveMaster(data) {
     return this.http.post(this.loginUrl,data);
   }
+  public updateMaster(data) {
+    const url = `${"http://localhost:4000/master"}/${data.id}`;
+      return this.http.put(url,JSON.stringify(data), {headers: this.headers})
+  }
   public deleteMaster(id) {
     const url = `${"http://localhost:4000/master"}/${id}`;
       return this.http.delete(url, {headers: this.headers})
