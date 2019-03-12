@@ -8,7 +8,7 @@ export class LoginService {
    constructor(private http: HttpClient) { }
    
 
-   loginUrl = 'assets/dumydata/login.json';
+   loginUrl = './assets/dumydata/login.json';
    
 
    public getLoginList(): Observable<any> {
