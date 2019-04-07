@@ -1,19 +1,32 @@
 {
-  "test": [
-    {
-      "name": "selva",
-      "color": "red",
-      "id": 1
-    },
-    {
-      "name": "mani",
-      "color": "black",
-      "id": 2
-    },
-    {
-      "name": "test",
-      "color": "silver",
-      "id": 4
-    }
-  ]
+  "login": [{ "name":"Se   lva Kumar", "username":"selva", "email":"kasiselvakumar@gmail.com","password":"selva" , "petname":"chella","image":"assets/images/selvaimg.jpg"},
+    { "name":"Santhosh Kumar", "username":"santhosh", "email":"santhosh@gmail.com","password":"santhosh" , "petname":"sandy","image":"assets/images/sandyimg.jpg"},
+    { "name":"Suresh Kumar", "username":"suresh", "email":"suresh@gmail.com","password":"suresh" , "petname":"SK","image":"assets/images/sureshimg.jpg"},
+    { "name":"Deepak E", "username":"deepak", "email":"deepak@gmail.com","password":"deepak" , "petname":"DK","image":"assets/images/deepakimg.jpg"},
+    { "name":"Pravin Kumar", "username":"pravin", "email":"pravin@gmail.com","password":"pravin" , "petname":"pravin","image":"assets/images/selvaimg.jpg"},
+    { "name":"Amal Dass", "username":"amal", "email":"amal@gmail.com","password":"amal" , "petname":"amal","image":"assets/images/selvaimg.jpg"},
+    { "name":"Admin", "username":"admin", "email":"admin@gmail.com","password":"admin" , "petname":"selva","image":"assets/images/selvaimg.jpg"}],
+    "master": [
+      {
+        "date": "2019-02-14T12:53:30.346Z",
+        "name": "selva",
+        "description": "maavu",
+        "amount": 100,
+        "id": 4
+      },
+      {
+        "date": "2019-02-14T13:26:52.182Z",
+        "name": "kavi",
+        "description": "Vegetable",
+        "amount": 100,
+        "id": 5
+      },
+      {
+        "date": "2019-02-14T13:30:27.750Z",
+        "name": "selva1",
+        "description": "vegtables",
+        "amount": 78,
+        "id": 6
+      }
+    ]
 }

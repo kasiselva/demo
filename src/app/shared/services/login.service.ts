@@ -12,7 +12,7 @@ export class LoginService {
    
 
    public getLoginList(): Observable<any> {
-     return this.http.get(this.loginUrl);
+     return this.http.get('http://localhost:3000/login');
    }
    login (product): Observable<any> {
     console.log(product);
